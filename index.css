@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #FFE0B2;
-    color: #D16B78;
+    color: #FE8572;
     user-select: none;
 }
 
@@ -20,7 +20,7 @@ img {
 }
 
 input {
-    color: #D16B78;
+    color: #FE8572;
     background-color: #FDFCFE;
     border: 0;
     padding: 15px;
@@ -32,7 +32,7 @@ input {
 }
 
 input:focus{
-    outline: 2px solid #D16B78;
+    outline: 2px solid #FE8572;
 }
 
 button {
@@ -47,7 +47,7 @@ button {
 }
 
 button:hover {
-    background-color: #D16B78;
+    background-color: #FE8572;
     cursor: pointer;
 }
 
@@ -72,4 +72,48 @@ ul li {
 ul li:hover {
     background-color: #FFC06E;
     cursor: pointer;
+}
+
+i {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #FDFCFE;
+}
+
+i:hover {
+    color: #F59467;
+    
+}
+
+i:hover::after {
+    content: "Insert an item and add to list.\A Double tap the item to remove.";
+    white-space: pre;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #F59467;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+    width: 220px;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+  
+  i::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
